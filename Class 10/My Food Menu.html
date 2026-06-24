@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Food Menu</title>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: aquamarine;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 { color: cornflowerblue; }
+
+        /* Sibling Selector - styles the paragraph right after h1 */
+        h1 + p {
+            background-color: dodgerblue;
+            padding: 10px 20px;
+            border-radius: 8px;
+            color: rgb(13, 48, 49);
+            display: inline-block;
+        }
+
+        ul { padding: 0; margin-top: 20px; }
+
+        ul > li {
+            list-style: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: darkcyan;
+            padding: 10px 20px;
+            margin: 6px auto;
+            width: 260px;
+            background-color: burlywood;
+            border-radius: 8px;
+        }
+
+        ul li:nth-child(3) {
+            background-color: aliceblue;
+            color: darksalmon;
+        }
+
+        .desc::first-letter {
+            font-size: 220%;
+        }
+
+        a:hover {
+            background: deepskyblue;
+            color: aliceblue;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>My Food Menu</h1>
+    <p>Pick your favourite dish and did in!</p>
+
+    <ul>
+        <li>Pizza</li>
+        <li>Burger</li>
+        <li>Tacos - Chef's Special!</li>
+        <li>Noodles</li>
+        <li>Hot Dogs</li>
+    </ul>
+
+    <p class="desc">Every dish on this menu is made with love and loads of flavour. Try them all and find your favourite!</p>
+
+    <div class="links">
+        <a href="#">Order Now!</a>
+        <a href="#">See More!</a>
+    </div>
+</body>
+</html>

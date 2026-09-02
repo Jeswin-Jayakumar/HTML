@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Methods in Arrays</h1>
+    <P>join methods join all the elements in the array using a seperator</P>
+    <div id="one"></div>
+    <p>pop methods will take out the last element in the array</p>
+    <div id="two"></div>
+    <p>After popping :</p>
+    <div id="three"></div>
+
+    <script>
+
+        var a = ["toy","book","gaming console","board","pieces"]
+        document.getElementById("one").innerHTML = a.join("*")
+        document.getElementById("two").innerHTML = a
+        a.pop()
+        document.getElementById("three").innerHTML = a
+
+    </script>
+</body>
+</html>

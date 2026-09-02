@@ -52,17 +52,26 @@
         
 var myContact = {
 
-name: "Riya Sharma",
+name: "Jeswin Jayakumar",
 
-phone: "98765-43210",
+phone: "98845-67515",
 
-school: "Sunrise Academy",
+school: "CPS",
 
-city: "Mumbai"
+city: "Chennai"
 
 };
 var nameEl = document.getElementById("name")
 var phoneEl = document.getElementById("phone")
+nameEl.textContent = myContact.name;
+phoneEl.textContent = myContact.phone;
+
+var schoolEl = document.getElementById("school")
+var cityEl = document.getElementById("city")
+schoolEl.textContent = myContact["school"]
+cityEl.textContent = myContact["city"];
+
+
     </script>   
 </body>
 </html>

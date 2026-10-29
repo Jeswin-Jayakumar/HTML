@@ -16,5 +16,50 @@
     <button onclick="toStr()">Turn into Text</button>
     <button onclick="toNum()">Turn into Number</button>
     <div id="convResult">Type a number above then press a button!</div>
+    <h3>Find and Swap a Word</h3>
+    <input id="findW">
+    <input id="swapW">
+    <button onclick="doSearch()">Find It!</button>
+    <button onclick="doReplace()">Swap It!</button>
+    <div id="srResult">Sentence: "The dragon flew over the big castle."</div>
+    <h3>Catch the Mistake</h3>
+    <input id="divIn">
+    <button onclick="trySafe()">Try it</button>
+    <div id="errResult">Type a number or something silly and see what happens!</div>
+    <Script>
+        var sen = "The dragon flew over the big castle.";
+        function checkTypes() {
+            document.getElementById("typeResult").innerText =
+            "Score 42 - type: " + typeof 42 + "\n" +
+            "Name 'Alex' - type: " + typeof "Alex" + "\n" +
+            "Game over true - type: " + typeof true;
+        }
+        function toStr() {
+            var v = document.getElementById("numIn").value;
+            document.getElementById("convResult").innerHTML = "String(" + v + ") = '" + String(v) + "' - now it is a: " + typeof String(v);
+        }
+        function toNum() {
+        var v = document.getElementById("numIn").value;
+        document.getElementById("convResult").innerHTML = "Number(" + v + ") = '" + Number(v) + "' - now it is a: " + typeof Number(v);
+        }
+        function doSearch() {
+            var w = document.getElementById("findW").value;
+            var p = sen.search(w);
+            document.getElementById("srResult").innerHTML = p === -1 ? "'" + w + "' is not in the sentence - try another word!" : "Found '" + w + "' hiding at position " + p + "!";        
+        }
+        function doReplace() {
+            var w = document.getElementById("findW").value;
+            document.getElementById("srResult").innerHTML = "New Sentence: " + sen.replace(w,document.getElementById("swapW").value);
+        }
+    function trySafe() {
+        try {
+            var n = document.getElementById("divIn").value;
+            if (n === "" || isNaN(n))
+        { throw "That is not a number - you caught the error!"; }
+        document.getElementById("errResult").innerHTML = "100 / " + n + " = " + (100 / Number(n)) + " - well done!";
+            } catch(err)
+        { document.getElementById("errResult").innerHTML = "Error caught: " + err; }
+    }
+    </Script>
 </body>
 </html>
